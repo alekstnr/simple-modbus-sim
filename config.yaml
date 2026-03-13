@@ -1,0 +1,49 @@
+server:
+  url: "tcp://localhost:5502"
+  timeout: 30
+  max_clients: 5
+  allow_undefined_registers: true
+devices:
+  - name: "device1"
+    modbus_id: 1
+    data:
+      coils:
+        "0": true
+        "1": false
+        "2": true
+        "3": false
+        "10": true
+      discrete_inputs:
+        "0": true
+        "1": true
+        "2": false
+        "100": true
+      holding_registers:
+        "0": 100
+        "1": 111
+        "2": 122
+        "10": 11111
+        "100": 1234
+      input_registers:
+        "0": 1000
+        "1": 2000
+        "2": 3000
+        "100": 5000
+        "200": 12345
+  - name: "device2"
+    modbus_id: 2
+    data:
+      coils:
+        "0": false
+        "1": true
+      discrete_inputs:
+        "0": false
+        "1": false
+      holding_registers:
+        "0": 200
+        "1": 211
+        "2": 222
+      input_registers:
+        "0": 5000
+        "1": 6000
+
